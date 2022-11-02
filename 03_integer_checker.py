@@ -1,11 +1,29 @@
 # checks if integer is valid
-def num_checker(question): 
+def num_checker(question, low): 
     valid = False 
     while not valid: 
 
-        error = "please choose a valid number" 
+        error = "please choose a number that is more than " 
+        "(or equal to) {}".format(low)
 
         try: 
-            response = float(input(question)) 
+            # asks user for number
+            response = int(input(question)) 
 
-            if response 
+            # checks the number is more than 0
+            if response > low : 
+                return response 
+
+            else : 
+                print(error) 
+                print
+
+        except ValueError:
+            print(error) 
+
+# main routine goes here 
+
+keep_going = ""
+while keep_going == "" :
+    print() 
+    
