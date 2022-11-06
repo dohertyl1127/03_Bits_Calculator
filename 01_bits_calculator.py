@@ -109,15 +109,19 @@ while keep_going == "":
         print()
         var_integer = num_check("Please enter an integer: ", 1) 
 
-        # for images, ask image 
+    # for images, ask image 
     elif data_type =="image": 
         print()
         image_width = num_check("Please enter image width: ", 1) 
         print()
         image_height = num_check("please enter image height: ", 1) 
 
-    keep_going = input("Press <enter> to keep going or any key to quit")
-    print()
+    # for text, ask for string
+    else : 
+        var_text = input("enter your text: ") 
 
+    keep_going = input("Press <enter> to keep going or any key to quit")
+    print() 
+    
 print("We are done") 
 print()
