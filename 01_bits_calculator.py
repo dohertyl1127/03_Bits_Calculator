@@ -21,7 +21,7 @@ def statement_generator(text, decoration, lines) :
     
     statement_generator("Bits Calculator", "-")
 
-# checks users enter text / image or integet
+# checks users enter text / image or integer
 def user_choice(): 
    
     # list of valid responses
@@ -65,6 +65,30 @@ def user_choice():
     print("you chose", data_type) 
     print()
 
+# checks integer is a number more than a given value
+def num_check(question, low): 
+    valid = False 
+    while not valid: 
+
+        error = "please choose a number that is more than (or equal to) {}".format(low)
+
+        try: 
+            # asks user for number
+            response = int(input(question)) 
+
+            # checks the number is more than 0
+            if response >= low : 
+                return response 
+
+            else : 
+                print(error) 
+                print()
+
+        except ValueError:
+            print()
+            print(error) 
+            print()
+
 # main routine goes here 
 
 statement_generator("bit calculator for intergers, text and images", "-", 3)
@@ -79,6 +103,18 @@ while keep_going == "":
     # checks users choice is 'interger', 'text' or 'image' 
     data_type = user_choice()
     print(data_type)
+
+    # for integers, ask integer 
+    if data_type =="integer": 
+        print()
+        var_integer = num_check("Please enter an integer: ", 1) 
+
+        # for images, ask image 
+    elif data_type =="image": 
+        print()
+        image_width = num_check("Please enter image width: ", 1) 
+        print()
+        image_height = num_check("please enter image height: ", 1) 
 
     keep_going = input("Press <enter> to keep going or any key to quit")
     print()

@@ -1,5 +1,5 @@
-# checks if integer is valid
-def num_checker(question, low): 
+# checks integer is a number more than a given value
+def num_check(question, low): 
     valid = False 
     while not valid: 
 
@@ -26,4 +26,11 @@ def num_checker(question, low):
 keep_going = ""
 while keep_going == "" :
     print() 
-    
+    # asks for a integer(must be more than or equal than 0)
+    var_integer = num_check("enter an integer: ", 1) 
+    print() 
+
+    # ask for image width and height 
+    # must be a number more than 1
+    image_width = num_check("enter image width: ", 1)
+    image_height = num_check("enter image height: ", 1)
