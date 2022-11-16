@@ -25,17 +25,18 @@ def num_check(question, low):
 def int_bits(): 
 
     # get integer (must be >=0)
-    var_int = input("please enter an integer: ", 0) 
+    print()
+    var_integer = num_check("please enter an integer: ", 0) 
 
-    var_binary = "{0:b}".format(var_int) 
+    var_binary = "{0:b}".format(var_integer) 
 
     # calculate the number of bits(lenght of sting above) 
     num_bits = len(var_binary) 
 
         # output answer with working 
     print() 
-    print("{} in binary is {} ".format(var_int, var_binary)) 
-    print("we need {} bits to represent {} ".format(num_bits, var_int)) 
+    print("{} in binary is {} ".format(var_integer, var_binary)) 
+    print("we need {} bits to represent {} ".format(num_bits, var_integer)) 
     print() 
  
     return ""
