@@ -144,15 +144,11 @@ while keep_going == "":
 
     # for integers, ask integer 
     if data_type =="integer": 
-        print()
-        var_integer = num_check("Please enter an integer: ", 1) 
+        int_bits()
 
     # for images, ask image 
     elif data_type =="image": 
-        print()
-        image_width = num_check("Please enter image width: ", 1) 
-        print()
-        image_height = num_check("please enter image height: ", 1) 
+        image_bits()
 
     # for text, ask for string
     else : 
